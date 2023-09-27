@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Page_Wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.navbar {
+  flex-grow: 0.5;
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  font-size: 2rem;
+  list-style: none;
+}
+li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+li:hover {
+  cursor: pointer;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  flex-grow: 9.5;
+  background-color: #ff0000;
+}
+.Displayed_Color {
+  padding: 1rem 3rem;
+  text-align: center;
+  border-radius: 1rem;
+  font-size: 3rem;
+  color: white;
+  background-color: #1c2323;
+}
+.Displayed_Color span {
+  text-transform: capitalize;
+}
+.Color_Changer {
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background-color: #ff0000;
+  box-shadow: 10px 5px 5px #1c2323;
+  color: black;
+}
+.chosen {
+  color: blue;
+}
