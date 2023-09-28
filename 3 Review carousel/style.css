@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 650px;
+  background-size: 20px 20px;
+  background-image: linear-gradient(to right, grey 0.5px, transparent 1px),
+    linear-gradient(to bottom, grey 0.5px, transparent 1px);
+}
+.title {
+  font-size: 6rem;
+  border-bottom: 6px solid rgb(56, 85, 180);
+  border-radius: 2px;
+  margin: 5%;
+}
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 60vw;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 10px 5px 5px gray;
+}
+.img_wrapper img {
+  border-radius: 50%;
+}
+.person_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.person_info .name,
+.person_info .profession {
+  text-transform: capitalize;
+}
+.review_text .text {
+  text-align: center;
+}
+.arrows {
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.suprise_me {
+  padding: 5px 10px;
+  border: 3px solid rgb(56, 85, 180);
+  border-radius: 10px;
+  color: rgb(56, 85, 180);
+  background-color: white;
+}
+.suprise_me:hover {
+  color: black;
+  background-color: rgb(56, 85, 180);
+}
