@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-size: 15px 15px;
+  background-image: linear-gradient(to right, lightgray 0.5px, transparent 1px),
+    linear-gradient(to bottom, lightgray 0.5px, transparent 1px);
+}
+.title {
+  font-size: 3rem;
+  font-family: "Caveat", cursive;
+  color: orangered;
+}
+.questions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+.section-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+}
+.question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 60%;
+  min-width: 600px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px 3px gray;
+  padding: 20px;
+}
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  padding-bottom: 10px;
+  /* border-bottom: 1px solid gray; */
+}
+.question-btn {
+  background-color: transparent;
+  padding: 5px;
+  font-size: 1rem;
+  color: orangered;
+  border: 2px solid orangered;
+}
+.plus-icon {
+  background-color: transparent;
+}
+.minus-icon {
+  display: none;
+}
+.question-text {
+  padding-top: 10px;
+  display: none;
+}
