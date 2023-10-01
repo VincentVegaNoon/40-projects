@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://picsum.photos/1920/1080");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.active {
+  filter: grayscale(70%);
+}
+.pre_modal,
+.modal {
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 1rem;
+}
+.pre_modal {
+  display: flex;
+  gap: 10%;
+  height: 25vh;
+  width: 40vw;
+}
+.pre_modal h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+}
+.pre_modal button {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  color: white;
+  background-color: rgb(49, 152, 187);
+  border-radius: 1rem;
+  border: 2px solid rgb(49, 152, 187);
+}
+
+.pre_modal button:hover {
+  color: rgb(49, 152, 187);
+  background-color: white;
+}
+
+.modal {
+  position: fixed;
+  display: none;
+  height: 25vh;
+  width: 45vw;
+}
+.modal button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5%;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  transition: 0.2s;
+  z-index: 1;
+}
