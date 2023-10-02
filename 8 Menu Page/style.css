@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  margin-top: 5%;
+}
+.title {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+.underline {
+  height: 5px;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 2px;
+  background-color: orangered;
+}
+.btn-container {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0 2rem 0;
+}
+.filter-btn {
+  color: orangered;
+  background-color: transparent;
+  border: 2px solid orangered;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.section-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  max-width: 1300px;
+  flex-grow: 1;
+  gap: 2rem;
+}
+.menu-item {
+  display: flex;
+  height: 250px;
+  width: 40%;
+  max-width: 600px;
+}
+.photo {
+  height: 200px;
+  width: 200px;
+  min-width: 200px;
+  border: 4px solid orangered;
+  border-radius: 15px;
+}
+.item-info {
+  padding-left: 1rem;
+}
+.item-info header {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  border-bottom: 2px solid orangered;
+}
+.item-info .price {
+  color: orangered;
+}
+.item-info .item-text {
+  padding-top: 1.5rem;
+}
+@media (max-width: 1200px) {
+  .section-center {
+    flex-direction: column;
+  }
+  .menu-item {
+    width: auto;
+  }
+}
