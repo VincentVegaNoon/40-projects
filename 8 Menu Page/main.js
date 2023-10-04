@@ -71,22 +71,21 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: "steak",
+    category: "dinner",
+    price: 16.99,
+    img: "./images/item-10.jpeg",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  },
 ];
 
 const sectionCenter = document.querySelector(".section-center");
-const filterButton = document.querySelectorAll(".filter-btn");
+const buttonContainer = document.querySelector(".btn-container");
 
-const viewFiltered = (e) => {
-  const item = e.target.getAttribute("data-id");
-  
-};
-
-filterButton.forEach((elem) => {
-  elem.addEventListener("click", viewFiltered);
-});
-
-window.addEventListener("DOMContentLoaded", function () {
-  let displayMenu = menu.map(function (item) {
+const displayMenu = (menu) => {
+  let display = menu.map(function (item) {
     return `<article class="menu-item">
             <img src=${item.img} alt="${item.title}" class="photo" />
             <div class="item-info">
@@ -100,7 +99,44 @@ window.addEventListener("DOMContentLoaded", function () {
             </div>
           </article>`;
   });
-  displayMenu = displayMenu.join("");
+  display = display.join("");
 
-  sectionCenter.innerHTML = displayMenu;
+  sectionCenter.innerHTML = display;
+};
+
+const viewFiltered = (e) => {
+  const tag = e.target.getAttribute("data-id");
+  if (tag === "all") {
+    return displayMenu(menu);
+  }
+  const result = menu.filter((elem) => elem.category === tag);
+  displayMenu(result);
+};
+
+window.addEventListener("DOMContentLoaded", () => {
+  displayMenu(menu);
+
+  const uniqueCategories = menu.reduce(
+    (categories, item) => {
+      if (!categories.includes(item.category)) {
+        categories.push(item.category);
+      }
+      return categories;
+    },
+    ["all"]
+  );
+  let displayButtons = uniqueCategories.map((item) => {
+    return `
+      <button class="filter-btn" data-id="${item}">${item}</button>`;
+  });
+  displayButtons = displayButtons.join("");
+  buttonContainer.innerHTML = displayButtons;
+  const filterButton = document.querySelectorAll(".filter-btn");
+  grabButtons(filterButton);
 });
+
+const grabButtons = (filterButton) => {
+  filterButton.forEach((elem) => {
+    elem.addEventListener("click", viewFiltered);
+  });
+};
