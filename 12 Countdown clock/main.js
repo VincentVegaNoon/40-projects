@@ -4,7 +4,7 @@ const minutesArea = document.querySelector(".minutes");
 const secondsArea = document.querySelector(".seconds");
 
 function calculateTimeLeft() {
-  const targetDate = new Date("2023-10-25T00:00:00Z");
+  const targetDate = new Date("2023-10-25T00:11:30Z");
   const currentDate = new Date();
   const timeDifference = targetDate - currentDate;
 
