@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Pagination from "./Pagination";
 import PokemonList from "./PokemonList";
-import { func } from "prop-types";
 
 function App() {
   const [pokemon, setPokemon] = useState([]);
